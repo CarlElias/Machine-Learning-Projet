@@ -1,0 +1,7 @@
+Analyse de données d'une Société qui vend des smartphones ou des accesoires.
+Notre but, est de faire une Analyse afin de repondre au question suivantes : 
+    1- Quel est le mois durant lequel nous avons realiser le meilleur chiffre ?
+    2- Dans quel ville nous avons enregistrer un maximum de commandes ?
+    3- EN quelle moment (Quel) doit on faire une compagne publicitaire pour avoir plus de ventes ?
+    4- Quel Produit se vend plus ?
+    5- Quel est la combinaison des produits qui est le plus vendu
