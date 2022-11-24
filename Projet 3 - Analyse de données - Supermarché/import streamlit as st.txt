@@ -1,0 +1,31 @@
+import streamlit as st
+import pandas as pd
+
+#igive possibility to user to import data
+uploaded_file = st.file_uploader("Choose a CSV file", type="csv")
+
+data = pd.read_csv(uploaded_file)
+db = data
+
+#give possibility to user to choose columns to display
+col1, col2, col3 = st.columns(3)
+with col1:
+    col_to_display = st.multiselect("Choose columns to display", data.columns)
+with col2:
+    data = data[col_to_display]
+    st.dataframe(data)
+with col3:
+    #afficher col_to_display unique valeurs avec leurs nombres
+    for col in col_to_display:
+        st.write(col)
+        st.write(data[col].value_counts())
+    
+st.write(db.isnull().sum())
+
+
+
+tab_metrics = tabs[0]
+
+with tab_metrics:
+    st.metric("Precision", 0.85, delta=0.2)
+    st.metric("Recall", 0.60, delta=-0.1)
